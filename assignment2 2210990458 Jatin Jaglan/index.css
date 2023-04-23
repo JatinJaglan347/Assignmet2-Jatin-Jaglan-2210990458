@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  }
+  
+  .nav {
+    height: 50px;
+    width: 100%;
+    background-color: #4d4d4d7b;
+    position: relative;
+    position: fixed;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+
+  .page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #333;
+  }
+  .page2{
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .container1{
+    display: flex;
+    border-radius: 25px;
+    width: 70vw;
+    background-color: #747474;
+    border: 10px;
+    border-color: red;
+    margin: 0 auto;
+    margin-top: 10vh ;
+    
+  }
+  .container2{
+    display: flex;
+    margin: 25px;
+
+  }
+  .page3{
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .page4{
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .container3 > img{
+    height: 45vh;
+    width: 15vw;
+  }
+  h2{
+    background-color: #4d4d4d;
+    margin-top: 15vh;
+    font-size: 2.5em;
+    padding: 1.5vw;
+    animation: color-change 3s linear infinite;
+  }
+  .container4{
+    margin-right: 5vw;
+    margin-left: 5vw;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: start;
+  }
+  .container4 > h1{
+    color: red;
+  }
+  .page5{
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    margin-top: 10vh;
+  }
+  @keyframes color-change {
+    0% { color: rgb(255, 0, 0); } 
+    14.28% { color: rgb(255, 165, 0); } 
+    28.56% { color: rgb(255, 255, 0); } 
+    42.84% { color: rgb(0, 255, 0); } 
+    57.12% { color: rgb(0, 127, 255); } 
+    71.4% { color: rgb(139, 0, 255); } 
+    85.68% { color: rgb(255, 0, 255); } 
+    100% { color: rgb(255, 0, 0);}
+  }
+
+
+  .home{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background-color: #333;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+  }
+  .home  img{
+    width: 50vw;
+    padding: 10vw;
+    padding-left: 0;
+    border-radius: 25px;
+  
+  }
+  .home-txt{
+    width: 60vw;
+    padding-top: 0vh;
+    padding-right: 0;
+    color:white ; 
+    padding: 10vw;
+    text-align: left;
+    word-wrap: break-word;
+   
+  }
+  .txt >p {
+    line-height: 3vh;
+    font-size: 1.5em;
+  }
+  .txt > h2{
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    background-color: transparent;
+    font-size: 4em;
+  }
+  .txt{
+    
+    margin-right: auto;
+   
+  }
